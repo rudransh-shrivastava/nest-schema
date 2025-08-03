@@ -122,7 +122,6 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd schema
           poetry install
 
       - name: Configure Git
@@ -133,7 +132,6 @@ jobs:
       - name: Bump version
         id: bump-version
         run: |
-          cd schema
           poetry run bump2version patch --commit --tag --allow-dirty
           echo "tag_name=$(poetry version --short)" >> $GITHUB_OUTPUT
         env:
@@ -148,7 +146,6 @@ jobs:
 
       - name: Build with new version
         run: |
-          cd schema
           poetry build
 
       - name: Publish to PyPI
