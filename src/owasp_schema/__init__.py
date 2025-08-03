@@ -5,6 +5,7 @@ This package provides JSON schemas for OWASP projects.
 
 import importlib.resources
 import json
+from typing import Any
 
 __version__ = "0.1.0"
 __author__ = "Arkadii Yakovets <arkadii.yakovets@owasp.org>"
@@ -12,9 +13,9 @@ __license__ = "MIT"
 
 
 # Load all JSON schemas
-def _load_schemas():
+def _load_schemas() -> dict[str, Any]:
     """Load all JSON schema files from the package directory."""
-    schemas = {}
+    schemas: dict[str, Any] = {}
     for schema_name in ("chapter", "committee", "project", "common"):
         schema_path = importlib.resources.files(__package__).joinpath(f"{schema_name}.json")
         with schema_path.open(encoding="utf-8") as f:
@@ -24,10 +25,10 @@ def _load_schemas():
 
 
 # Load schemas at module import time
-SCHEMAS = _load_schemas()
+SCHEMAS: dict[str, Any] = _load_schemas()
 
 
-def get_schema(schema_name: str) -> dict:
+def get_schema(schema_name: str) -> dict[str, Any]:
     """Get a specific schema by name.
 
     Args:
@@ -57,7 +58,7 @@ def list_schemas() -> list[str]:
     return list(SCHEMAS.keys())
 
 
-def get_all_schemas() -> dict[str, dict]:
+def get_all_schemas() -> dict[str, dict[str, Any]]:
     """Get all available schemas.
 
     Returns:

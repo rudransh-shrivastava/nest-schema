@@ -26,14 +26,12 @@ def check_uri_format(value):
 
 @lru_cache
 def get_registry():
-    return Registry().with_resource(
-        COMMON_JSON,
-        Resource.from_contents(
-            json.load(
-                Path.open(f"{Path(__file__).parent.parent.resolve()}/{COMMON_JSON}"),
-            ),
-        ),
-    )
+    schema_path = Path(f"{Path(__file__).parent.parent.resolve()}/{COMMON_JSON}")
+    with schema_path.open() as f:
+        return Registry().with_resource(
+            COMMON_JSON,
+            Resource.from_contents(json.load(f)),
+        )
 
 
 def validate_data(schema, data):
