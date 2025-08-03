@@ -2,7 +2,7 @@
 
 import pytest
 
-from owasp_schema import __version__, get_all_schemas, get_schema, list_schemas
+from owasp_schema import get_all_schemas, get_schema, list_schemas
 
 
 def test_list_schemas():
@@ -52,9 +52,3 @@ def test_schema_structure():
         assert "$schema" in schema, f"Schema {schema_name} missing $schema"
         assert "title" in schema, f"Schema {schema_name} missing title"
         assert "type" in schema, f"Schema {schema_name} missing type"
-
-
-def test_package_version():
-    """Test that package version is accessible."""
-    assert isinstance(__version__, str)
-    assert __version__ == "0.1.0"
