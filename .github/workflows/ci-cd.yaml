@@ -103,6 +103,7 @@ jobs:
   publish-schema-package:
     name: Publish to PyPI
     needs:
+      - code-ql
       - run-tests
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
