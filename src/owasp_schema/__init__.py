@@ -7,7 +7,7 @@ import importlib.resources
 import json
 from typing import Any
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __author__ = "Arkadii Yakovets <arkadii.yakovets@owasp.org>"
 __license__ = "MIT"
 
