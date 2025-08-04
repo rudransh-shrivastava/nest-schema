@@ -17,6 +17,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 packages = [{ include = "owasp_schema", from = "src" }]
+include = ["*.json"]
 
 [build-system]
 requires = ["poetry-core"]

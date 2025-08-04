@@ -4,7 +4,6 @@ include *.md
 include *.cfg
 include README.md
 include LICENSE
-include src/owasp_schema/*.json
 recursive-exclude tests *
 recursive-exclude docker *
 recursive-exclude utils *
