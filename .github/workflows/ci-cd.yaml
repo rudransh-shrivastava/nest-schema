@@ -147,7 +147,7 @@ jobs:
 
       - name: Build with new version
         run: |
-          poetry build
+          make build-package
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@76f52bc884231f62b9a034ebfe128415bbaabdfc
