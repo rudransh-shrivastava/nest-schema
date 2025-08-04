@@ -3,7 +3,6 @@ include *.md
 include *.cfg
 include README.md
 include LICENSE
-recursive-include *.json
 recursive-exclude tests *
 recursive-exclude docker *
 recursive-exclude utils *

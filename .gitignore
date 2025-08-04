@@ -3,4 +3,3 @@ __pycache__
 .ruff_cache/
 .venv/
 dist/
-src/owasp_schema/*.json
