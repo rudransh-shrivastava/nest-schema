@@ -1,26 +1,27 @@
+[build-system]
+build-backend = "poetry.core.masonry.api"
+
+requires = [ "poetry-core" ]
+
 [tool.poetry]
 name = "owasp-schema"
 version = "0.1.13"
 description = "A collection of OWASP schemas"
-authors = ["Arkadii Yakovets <arkadii.yakovets@owasp.org>"]
+authors = [ "Arkadii Yakovets <arkadii.yakovets@owasp.org>" ]
 license = "MIT"
 readme = "README.md"
 homepage = "https://nest.owasp.org"
 repository = "https://github.com/OWASP/Nest"
-keywords = ["owasp", "schema", "json-schema"]
+keywords = [ "owasp", "schema", "json-schema" ]
 classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.11",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-packages = [{ include = "owasp_schema", from = "src" }]
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+packages = [ { include = "owasp_schema", from = "src" } ]
 
 [tool.poetry.dependencies]
 jsonschema = "^4.23.0"
@@ -37,20 +38,17 @@ ruff = "^0.12.7"
 generate-setup-file = false
 
 [tool.ruff]
-line-length = 99
 target-version = "py311"
 
-[tool.ruff.lint]
-extend-select = ["I"]
-ignore = [
-    "ANN",
-    "D103",
+line-length = 99
+lint.select = [ "ALL" ]
+lint.extend-select = [ "I" ]
+lint.ignore = [
+  "ANN",
+  "D103",
 ]
-select = ["ALL"]
-
-[tool.ruff.lint.per-file-ignores]
-"**/__init__.py" = ["D104"]
-"**/*.py" = ["S101"]
+lint.per-file-ignores."**/*.py" = [ "S101" ]
+lint.per-file-ignores."**/__init__.py" = [ "D104" ]
 
 [tool.mypy]
 check_untyped_defs = true
