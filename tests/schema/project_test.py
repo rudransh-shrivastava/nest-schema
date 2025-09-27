@@ -75,9 +75,10 @@ from tests.conftest import tests_data_dir
         ("level_undefined.yaml", "'level' is a required property"),
         (
             "license_invalid.yaml",
-            "'INVALID-LICENSE-VALUE' is not one of ['AGPL-3.0', 'Apache-2.0', 'BSD-2-Clause', "
-            "'BSD-3-Clause', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'CC0-1.0', 'EUPL-1.2', 'GPL-2.0', "
-            "'GPL-3.0', 'LGPL-2.1', 'LGPL-3.0', 'MIT', 'MPL-2.0', 'OTHER']",
+            "'INVALID-LICENSE-VALUE' is not one of ['AGPL-3.0', 'Apache License 2.0', "
+            "'Apache-2.0', 'BSD-2-Clause', 'BSD-3-Clause', 'CC-BY-4.0', 'CC-BY-SA-4.0', "
+            "'CC0-1.0', 'EUPL-1.2', 'GPL-2.0', 'GPL-3.0', 'LGPL-2.1', 'LGPL-3.0', 'MIT', "
+            "'MPL-2.0', 'OTHER']",
         ),
         ("logo_empty.yaml", "[] should be non-empty"),
         ("logo_null.yaml", "None is not of type 'array'"),
