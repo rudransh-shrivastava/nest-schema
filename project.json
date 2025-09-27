@@ -152,7 +152,7 @@
     },
     "name": {
       "description": "The unique name of the project.",
-      "minLength": 10,
+      "minLength": 8,
       "type": "string"
     },
     "pitch": {

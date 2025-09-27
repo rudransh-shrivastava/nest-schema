@@ -95,6 +95,7 @@ from tests.conftest import tests_data_dir
         ("mailing_list_invalid.yaml", "'https://xyz' is not of type 'array'"),
         ("mailing_list_null.yaml", "None is not of type 'array'"),
         ("name_empty.yaml", "'' is too short"),
+        ("name_invalid.yaml", "'Name' is too short"),
         ("name_null.yaml", "None is not of type 'string'"),
         ("name_undefined.yaml", "'name' is a required property"),
         ("pitch_empty.yaml", "'' is too short"),
