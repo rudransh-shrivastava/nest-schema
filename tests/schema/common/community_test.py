@@ -12,6 +12,9 @@ SCHEMA_NAME = "community"
     [
         ("description_empty.yaml", "'' is too short"),
         ("description_null.yaml", "None is not of type 'string'"),
+        ("name_empty.yaml", "'' is too short"),
+        ("name_null.yaml", "None is not of type 'string'"),
+        ("name_undefined.yaml", "'name' is a required property"),
         ("platform_empty.yaml", "'' is not one of ['discord', 'slack']"),
         ("platform_invalid.yaml", "'telegram' is not one of ['discord', 'slack']"),
         ("platform_null.yaml", "None is not one of ['discord', 'slack']"),

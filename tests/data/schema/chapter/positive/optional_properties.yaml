@@ -1,10 +1,12 @@
 blog: https://blog.chapter.com
 country: India
 community:
-  - platform: slack
+  - name: Slack Community
+    platform: slack
     url: https://slack.com/example
     description: Slack community
-  - platform: discord
+  - name: Discord Community
+    platform: discord
     url: https://discord.com/example
     description: Discord community
 events:

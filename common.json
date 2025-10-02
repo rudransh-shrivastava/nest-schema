@@ -11,6 +11,11 @@
           "minLength": 10,
           "type": "string"
         },
+        "name": {
+          "description": "The name of the community.",
+          "minLength": 3,
+          "type": "string"
+        },
         "platform": {
           "description": "The platform used by the community",
           "enum": [
@@ -26,6 +31,7 @@
         }
       },
       "required": [
+        "name",
         "platform",
         "url"
       ],
