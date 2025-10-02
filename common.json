@@ -20,6 +20,7 @@
           "description": "The platform used by the community",
           "enum": [
             "discord",
+            "github-discussions",
             "slack"
           ],
           "type": "string"
@@ -215,6 +216,7 @@
           "enum": [
             "bluesky",
             "linkedin",
+            "mastodon",
             "x",
             "youtube"
           ],

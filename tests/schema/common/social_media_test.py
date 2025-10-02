@@ -14,15 +14,15 @@ SCHEMA_NAME = "social_media"
         ("description_null.yaml", "None is not of type 'string'"),
         (
             "platform_empty.yaml",
-            "'' is not one of ['bluesky', 'linkedin', 'x', 'youtube']",
+            "'' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
         ),
         (
             "platform_invalid.yaml",
-            "'bitcoin' is not one of ['bluesky', 'linkedin', 'x', 'youtube']",
+            "'bitcoin' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
         ),
         (
             "platform_null.yaml",
-            "None is not one of ['bluesky', 'linkedin', 'x', 'youtube']",
+            "None is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
         ),
         ("platform_undefined.yaml", "'platform' is a required property"),
         ("url_empty.yaml", "'' is not a 'uri'"),
