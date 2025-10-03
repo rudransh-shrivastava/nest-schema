@@ -66,6 +66,12 @@ from tests.conftest import tests_data_dir
         ("events_null.yaml", "None is not of type 'array'"),
         ("leaders_empty.yaml", "[] should be non-empty"),
         (
+            "leaders_max.yaml",
+            "[{'name': 'Leader One'}, {'name': 'Leader Two'}, {'name': 'Leader Three'}, "
+            "{'name': 'Leader Four'}, {'name': 'Leader Five'}, {'name': 'Leader Six'}] "
+            "is too long",
+        ),
+        (
             "leaders_non_unique.yaml",
             "[{'github': 'leader1'}, {'github': 'leader1'}] has non-unique elements",
         ),
