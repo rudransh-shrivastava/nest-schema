@@ -142,7 +142,7 @@
         },
         "name": {
           "description": "Full name",
-          "minLength": 5,
+          "minLength": 2,
           "type": "string"
         },
         "slack": {
