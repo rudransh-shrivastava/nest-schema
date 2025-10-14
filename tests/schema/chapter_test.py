@@ -61,6 +61,13 @@ from tests.conftest import tests_data_dir
         ("name_undefined.yaml", "$: 'name' is a required property"),
         ("region_empty.yaml", "$.region: '' should be non-empty"),
         ("region_null.yaml", "$.region: None is not of type 'string'"),
+        ("repositories_empty.yaml", "$.repositories: [] should be non-empty"),
+        (
+            "repositories_non_unique.yaml",
+            "$.repositories: [{'url': 'https://repo1.com'}, "
+            "{'url': 'https://repo1.com'}] has non-unique elements",
+        ),
+        ("repositories_null.yaml", "$.repositories: None is not of type 'array'"),
         ("social_media_empty.yaml", "$.social_media: [] should be non-empty"),
         (
             "social_media_non_unique.yaml",

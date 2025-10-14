@@ -75,6 +75,15 @@
       "minLength": 1,
       "type": "string"
     },
+    "repositories": {
+      "description": "Repositories associated with the chapter.",
+      "items": {
+        "$ref": "common.json#/definitions/repository"
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
     "social_media": {
       "description": "Social media information for the chapter.",
       "items": {
