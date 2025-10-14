@@ -44,4 +44,4 @@ def validate_data(schema, data):
             schema=schema,
         )
     except ValidationError as e:
-        return e.message
+        return f"{e.json_path}: {e.message}"

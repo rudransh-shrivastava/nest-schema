@@ -40,8 +40,8 @@ def main():
         sys.stderr.write("ERROR: Could not access OWASP metadata file.\n")
         sys.exit(1)
 
-    if error_message := validate_data(schema=get_schema(schema_name), data=data):
-        sys.stderr.write(f"ERROR: Validation failed! {error_message}\n")
+    if error_path := validate_data(schema=get_schema(schema_name), data=data):
+        sys.stderr.write(f"ERROR: Validation failed at {error_path}\n")
         sys.exit(1)
 
     sys.stdout.write("SUCCESS: Validation passed!\n")
