@@ -10,25 +10,26 @@ SCHEMA_NAME = "social_media"
 @pytest.mark.parametrize(
     ("file_path", "error_message"),
     [
-        ("description_empty.yaml", "'' is too short"),
-        ("description_null.yaml", "None is not of type 'string'"),
+        ("description_empty.yaml", "$.description: '' is too short"),
+        ("description_null.yaml", "$.description: None is not of type 'string'"),
         (
             "platform_empty.yaml",
-            "'' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
+            "$.platform: '' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
         ),
         (
             "platform_invalid.yaml",
-            "'bitcoin' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
+            "$.platform: 'bitcoin' is not one of ['bluesky', 'linkedin', 'mastodon', 'x', "
+            "'youtube']",
         ),
         (
             "platform_null.yaml",
-            "None is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
+            "$.platform: None is not one of ['bluesky', 'linkedin', 'mastodon', 'x', 'youtube']",
         ),
-        ("platform_undefined.yaml", "'platform' is a required property"),
-        ("url_empty.yaml", "'' is not a 'uri'"),
-        ("url_invalid.yaml", "'https://bsky' is not a 'uri'"),
-        ("url_null.yaml", "None is not of type 'string'"),
-        ("url_undefined.yaml", "'url' is a required property"),
+        ("platform_undefined.yaml", "$: 'platform' is a required property"),
+        ("url_empty.yaml", "$.url: '' is not a 'uri'"),
+        ("url_invalid.yaml", "$.url: 'https://bsky' is not a 'uri'"),
+        ("url_null.yaml", "$.url: None is not of type 'string'"),
+        ("url_undefined.yaml", "$: 'url' is a required property"),
     ],
 )
 def test_negative(common_schema, file_path, error_message):

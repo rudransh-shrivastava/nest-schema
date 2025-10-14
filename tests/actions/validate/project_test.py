@@ -30,7 +30,7 @@ def test_negative(mock_workspace, capsys, filename, expected_error):
         action.main()
     assert exit_info.value.code == 1
     captured = capsys.readouterr()
-    assert "ERROR: Validation failed!" in captured.err
+    assert "ERROR: Validation failed at" in captured.err
     assert expected_error in captured.err
 
 

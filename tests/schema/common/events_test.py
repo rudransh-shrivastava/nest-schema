@@ -10,14 +10,14 @@ SCHEMA_NAME = "event"
 @pytest.mark.parametrize(
     ("file_path", "error_message"),
     [
-        ("description_empty.yaml", "'' is too short"),
-        ("description_null.yaml", "None is not of type 'string'"),
-        ("title_empty.yaml", "'' is too short"),
-        ("title_null.yaml", "None is not of type 'string'"),
-        ("url_empty.yaml", "'' is not a 'uri'"),
-        ("url_invalid.yaml", "'https://xyz' is not a 'uri'"),
-        ("url_null.yaml", "None is not a 'uri'"),
-        ("url_undefined.yaml", "'url' is a required property"),
+        ("description_empty.yaml", "$.description: '' is too short"),
+        ("description_null.yaml", "$.description: None is not of type 'string'"),
+        ("title_empty.yaml", "$.title: '' is too short"),
+        ("title_null.yaml", "$.title: None is not of type 'string'"),
+        ("url_empty.yaml", "$.url: '' is not a 'uri'"),
+        ("url_invalid.yaml", "$.url: 'https://xyz' is not a 'uri'"),
+        ("url_null.yaml", "$.url: None is not a 'uri'"),
+        ("url_undefined.yaml", "$: 'url' is a required property"),
     ],
 )
 def test_negative(common_schema, file_path, error_message):

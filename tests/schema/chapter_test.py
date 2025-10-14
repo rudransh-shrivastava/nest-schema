@@ -12,79 +12,79 @@ from tests.conftest import tests_data_dir
 @pytest.mark.parametrize(
     ("file_path", "error_message"),
     [
-        ("blog_empty.yaml", "'' is not a 'uri'"),
-        ("blog_invalid.yaml", "'invalid-blog-uri' is not a 'uri'"),
-        ("blog_null.yaml", "None is not a 'uri'"),
-        ("community_empty.yaml", "[] should be non-empty"),
+        ("blog_empty.yaml", "$.blog: '' is not a 'uri'"),
+        ("blog_invalid.yaml", "$.blog: 'invalid-blog-uri' is not a 'uri'"),
+        ("blog_null.yaml", "$.blog: None is not a 'uri'"),
+        ("community_empty.yaml", "$.community: [] should be non-empty"),
         (
             "community_non_unique.yaml",
-            "[{'platform': 'discord', 'url': 'https://discord.com/example'}, "
+            "$.community: [{'platform': 'discord', 'url': 'https://discord.com/example'}, "
             "{'platform': 'discord', 'url': 'https://discord.com/example'}] "
             "has non-unique elements",
         ),
-        ("community_null.yaml", "None is not of type 'array'"),
-        ("country_empty.yaml", "'' should be non-empty"),
-        ("country_null.yaml", "None is not of type 'string'"),
-        ("country_undefined.yaml", "'country' is a required property"),
-        ("events_empty.yaml", "[] should be non-empty"),
+        ("community_null.yaml", "$.community: None is not of type 'array'"),
+        ("country_empty.yaml", "$.country: '' should be non-empty"),
+        ("country_null.yaml", "$.country: None is not of type 'string'"),
+        ("country_undefined.yaml", "$: 'country' is a required property"),
+        ("events_empty.yaml", "$.events: [] should be non-empty"),
         (
             "events_non_unique.yaml",
-            "[{'url': 'https://example.com/event1'}, "
+            "$.events: [{'url': 'https://example.com/event1'}, "
             "{'url': 'https://example.com/event1'}] has non-unique elements",
         ),
-        ("events_null.yaml", "None is not of type 'array'"),
-        ("leaders_empty.yaml", "[] is too short"),
+        ("events_null.yaml", "$.events: None is not of type 'array'"),
+        ("leaders_empty.yaml", "$.leaders: [] is too short"),
         (
             "leaders_non_unique.yaml",
-            "[{'github': 'leader1'}, {'github': 'leader1'}] has non-unique elements",
+            "$.leaders: [{'github': 'leader1'}, {'github': 'leader1'}] has non-unique elements",
         ),
-        ("leaders_null.yaml", "None is not of type 'array'"),
-        ("leaders_undefined.yaml", "'leaders' is a required property"),
-        ("logo_empty.yaml", "[] should be non-empty"),
+        ("leaders_null.yaml", "$.leaders: None is not of type 'array'"),
+        ("leaders_undefined.yaml", "$: 'leaders' is a required property"),
+        ("logo_empty.yaml", "$.logo: [] should be non-empty"),
         (
             "logo_non_unique.yaml",
-            "[{'small': 'https://example.com/smallLogo.png', "
+            "$.logo: [{'small': 'https://example.com/smallLogo.png', "
             "'medium': 'https://example.com/mediumLogo.png', "
             "'large': 'https://example.com/largeLogo.png'}, "
             "{'small': 'https://example.com/smallLogo.png', "
             "'medium': 'https://example.com/mediumLogo.png', "
             "'large': 'https://example.com/largeLogo.png'}] has non-unique elements",
         ),
-        ("logo_null.yaml", "None is not of type 'array'"),
-        ("mailing_list_empty.yaml", "'' is not of type 'array'"),
-        ("mailing_list_invalid.yaml", "'https://xyz' is not of type 'array'"),
-        ("mailing_list_null.yaml", "None is not of type 'array'"),
-        ("meetup_group_empty.yaml", "'' should be non-empty"),
-        ("meetup_group_null.yaml", "None is not of type 'string'"),
-        ("name_empty.yaml", "'' is too short"),
-        ("name_null.yaml", "None is not of type 'string'"),
-        ("name_undefined.yaml", "'name' is a required property"),
-        ("region_empty.yaml", "'' should be non-empty"),
-        ("region_null.yaml", "None is not of type 'string'"),
-        ("social_media_empty.yaml", "[] should be non-empty"),
+        ("logo_null.yaml", "$.logo: None is not of type 'array'"),
+        ("mailing_list_empty.yaml", "$.mailing_list: '' is not of type 'array'"),
+        ("mailing_list_invalid.yaml", "$.mailing_list: 'https://xyz' is not of type 'array'"),
+        ("mailing_list_null.yaml", "$.mailing_list: None is not of type 'array'"),
+        ("meetup_group_empty.yaml", "$.meetup_group: '' should be non-empty"),
+        ("meetup_group_null.yaml", "$.meetup_group: None is not of type 'string'"),
+        ("name_empty.yaml", "$.name: '' is too short"),
+        ("name_null.yaml", "$.name: None is not of type 'string'"),
+        ("name_undefined.yaml", "$: 'name' is a required property"),
+        ("region_empty.yaml", "$.region: '' should be non-empty"),
+        ("region_null.yaml", "$.region: None is not of type 'string'"),
+        ("social_media_empty.yaml", "$.social_media: [] should be non-empty"),
         (
             "social_media_non_unique.yaml",
-            "[{'platform': 'youtube', 'url': 'https://youtube.com/channel/123'}, "
+            "$.social_media: [{'platform': 'youtube', 'url': 'https://youtube.com/channel/123'}, "
             "{'platform': 'youtube', 'url': 'https://youtube.com/channel/123'}] "
             "has non-unique elements",
         ),
-        ("social_media_null.yaml", "None is not of type 'array'"),
-        ("sponsors_empty.yaml", "[] should be non-empty"),
+        ("social_media_null.yaml", "$.social_media: None is not of type 'array'"),
+        ("sponsors_empty.yaml", "$.sponsors: [] should be non-empty"),
         (
             "sponsors_non_unique.yaml",
-            "[{'name': 'CyberSec Corp', 'url': 'https://cybersec.com'}, "
+            "$.sponsors: [{'name': 'CyberSec Corp', 'url': 'https://cybersec.com'}, "
             "{'name': 'CyberSec Corp', 'url': 'https://cybersec.com'}] has non-unique elements",
         ),
-        ("sponsors_null.yaml", "None is not of type 'array'"),
-        ("tags_empty.yaml", "[] is too short"),
+        ("sponsors_null.yaml", "$.sponsors: None is not of type 'array'"),
+        ("tags_empty.yaml", "$.tags: [] is too short"),
         (
             "tags_non_unique.yaml",
-            "['example-tag-1', 'example-tag-1', 'example-tag-1'] has non-unique elements",
+            "$.tags: ['example-tag-1', 'example-tag-1', 'example-tag-1'] has non-unique elements",
         ),
-        ("tags_null.yaml", "None is not of type 'array'"),
-        ("tags_undefined.yaml", "'tags' is a required property"),
-        ("website_empty.yaml", "'' is not a 'uri'"),
-        ("website_null.yaml", "None is not a 'uri'"),
+        ("tags_null.yaml", "$.tags: None is not of type 'array'"),
+        ("tags_undefined.yaml", "$: 'tags' is a required property"),
+        ("website_empty.yaml", "$.website: '' is not a 'uri'"),
+        ("website_null.yaml", "$.website: None is not a 'uri'"),
     ],
 )
 def test_negative(chapter_schema, file_path, error_message):

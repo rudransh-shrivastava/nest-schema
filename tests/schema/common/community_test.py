@@ -10,22 +10,28 @@ SCHEMA_NAME = "community"
 @pytest.mark.parametrize(
     ("file_path", "error_message"),
     [
-        ("description_empty.yaml", "'' is too short"),
-        ("description_null.yaml", "None is not of type 'string'"),
-        ("name_empty.yaml", "'' is too short"),
-        ("name_null.yaml", "None is not of type 'string'"),
-        ("name_undefined.yaml", "'name' is a required property"),
-        ("platform_empty.yaml", "'' is not one of ['discord', 'github-discussions', 'slack']"),
+        ("description_empty.yaml", "$.description: '' is too short"),
+        ("description_null.yaml", "$.description: None is not of type 'string'"),
+        ("name_empty.yaml", "$.name: '' is too short"),
+        ("name_null.yaml", "$.name: None is not of type 'string'"),
+        ("name_undefined.yaml", "$: 'name' is a required property"),
+        (
+            "platform_empty.yaml",
+            "$.platform: '' is not one of ['discord', 'github-discussions', 'slack']",
+        ),
         (
             "platform_invalid.yaml",
-            "'telegram' is not one of ['discord', 'github-discussions', 'slack']",
+            "$.platform: 'telegram' is not one of ['discord', 'github-discussions', 'slack']",
         ),
-        ("platform_null.yaml", "None is not one of ['discord', 'github-discussions', 'slack']"),
-        ("platform_undefined.yaml", "'platform' is a required property"),
-        ("url_empty.yaml", "'' is not a 'uri'"),
-        ("url_invalid.yaml", "'discord.com/invalid' is not a 'uri'"),
-        ("url_null.yaml", "None is not a 'uri'"),
-        ("url_undefined.yaml", "'url' is a required property"),
+        (
+            "platform_null.yaml",
+            "$.platform: None is not one of ['discord', 'github-discussions', 'slack']",
+        ),
+        ("platform_undefined.yaml", "$: 'platform' is a required property"),
+        ("url_empty.yaml", "$.url: '' is not a 'uri'"),
+        ("url_invalid.yaml", "$.url: 'discord.com/invalid' is not a 'uri'"),
+        ("url_null.yaml", "$.url: None is not a 'uri'"),
+        ("url_undefined.yaml", "$: 'url' is a required property"),
     ],
 )
 def test_negative(common_schema, file_path, error_message):
