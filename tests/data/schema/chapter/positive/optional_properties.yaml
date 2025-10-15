@@ -1,14 +1,13 @@
 blog: https://blog.chapter.com
-country: India
 community:
-  - name: Slack Community
+  - description: Slack community
+    name: Slack Community
     platform: slack
     url: https://slack.com/example
-    description: Slack community
-  - name: Discord Community
+  - description: Discord community
+    name: Discord Community
     platform: discord
     url: https://discord.com/example
-    description: Discord community
 events:
   - description: OWASP event description
     title: OWASP Event
@@ -22,10 +21,20 @@ leaders:
   - github: leader-2-github
     name: Leader 2 Name
     slack: leader-2-slack
+location:
+  address: 123 Main Street
+  city: Mumbai
+  country: India
+  country_code: IN
+  latitude: 19.0760
+  longitude: 72.8777
+  postal_code: '400001'
+  region: Maharashtra
+  timezone: Asia/Kolkata
 logo:
-  - small: https://example.com/smallLogo
+  - large: https://example.com/largeLogo
     medium: https://example.com/mediumLogo
-    large: https://example.com/largeLogo
+    small: https://example.com/smallLogo
 mailing_list:
   - description: Mailing list description
     email: testorg@example.com
@@ -33,7 +42,6 @@ mailing_list:
     url: https://testmailinglist.com
 meetup_group: OWASP Meetup
 name: OWASP Chapter
-region: Asia
 social_media:
   - description: A brief description of the social media platform
     platform: youtube

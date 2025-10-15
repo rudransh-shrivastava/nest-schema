@@ -1,7 +1,9 @@
-country: India
 leaders:
   - github: leader1
   - github: leader1
+location:
+  country: India
+  country_code: IN
 name: OWASP Chapter
 tags:
   - example-tag-1

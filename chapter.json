@@ -18,11 +18,6 @@
       "type": "array",
       "uniqueItems": true
     },
-    "country": {
-      "description": "Country.",
-      "minLength": 1,
-      "type": "string"
-    },
     "events": {
       "description": "Events related to the project.",
       "items": {
@@ -40,6 +35,10 @@
       "minItems": 2,
       "type": "array",
       "uniqueItems": true
+    },
+    "location": {
+      "$ref": "common.json#/definitions/location",
+      "description": "Location of the chapter."
     },
     "logo": {
       "additionalProperties": false,
@@ -68,11 +67,6 @@
     "name": {
       "description": "The unique name of chapter.",
       "minLength": 10,
-      "type": "string"
-    },
-    "region": {
-      "description": "Region.",
-      "minLength": 1,
       "type": "string"
     },
     "repositories": {
@@ -119,8 +113,8 @@
     }
   },
   "required": [
-    "country",
     "leaders",
+    "location",
     "name",
     "tags"
   ],

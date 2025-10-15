@@ -23,9 +23,6 @@ from tests.conftest import tests_data_dir
             "has non-unique elements",
         ),
         ("community_null.yaml", "$.community: None is not of type 'array'"),
-        ("country_empty.yaml", "$.country: '' should be non-empty"),
-        ("country_null.yaml", "$.country: None is not of type 'string'"),
-        ("country_undefined.yaml", "$: 'country' is a required property"),
         ("events_empty.yaml", "$.events: [] should be non-empty"),
         (
             "events_non_unique.yaml",
@@ -40,6 +37,9 @@ from tests.conftest import tests_data_dir
         ),
         ("leaders_null.yaml", "$.leaders: None is not of type 'array'"),
         ("leaders_undefined.yaml", "$: 'leaders' is a required property"),
+        ("location_empty.yaml", "$.location: 'country' is a required property"),
+        ("location_null.yaml", "$.location: None is not of type 'object'"),
+        ("location_undefined.yaml", "$: 'location' is a required property"),
         ("logo_empty.yaml", "$.logo: [] should be non-empty"),
         (
             "logo_non_unique.yaml",
@@ -59,8 +59,6 @@ from tests.conftest import tests_data_dir
         ("name_empty.yaml", "$.name: '' is too short"),
         ("name_null.yaml", "$.name: None is not of type 'string'"),
         ("name_undefined.yaml", "$: 'name' is a required property"),
-        ("region_empty.yaml", "$.region: '' should be non-empty"),
-        ("region_null.yaml", "$.region: None is not of type 'string'"),
         ("repositories_empty.yaml", "$.repositories: [] should be non-empty"),
         (
             "repositories_non_unique.yaml",

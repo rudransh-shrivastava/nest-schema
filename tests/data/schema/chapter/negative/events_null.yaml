@@ -1,4 +1,3 @@
-country: India
 events:
 leaders:
   - github: leader-1-github
@@ -6,6 +5,9 @@ leaders:
   - github: leader-2-github
     name: Leader 2 Name
     slack: leader-2-slack
+location:
+  country: India
+  country_code: IN
 name: OWASP Chapter
 tags:
   - example-tag-1

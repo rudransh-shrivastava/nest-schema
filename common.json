@@ -65,6 +65,65 @@
       "title": "Event",
       "type": "object"
     },
+    "location": {
+      "additionalProperties": false,
+      "description": "A geographic location",
+      "properties": {
+        "address": {
+          "description": "Street address",
+          "minLength": 5,
+          "type": "string"
+        },
+        "city": {
+          "description": "City name",
+          "minLength": 2,
+          "type": "string"
+        },
+        "country": {
+          "description": "Country name",
+          "minLength": 2,
+          "type": "string"
+        },
+        "country_code": {
+          "description": "ISO 3166-1 alpha-2 country code",
+          "pattern": "^[A-Z]{2}$",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Latitude coordinate",
+          "maximum": 90,
+          "minimum": -90,
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Longitude coordinate",
+          "maximum": 180,
+          "minimum": -180,
+          "type": "number"
+        },
+        "postal_code": {
+          "description": "Postal or ZIP code",
+          "minLength": 2,
+          "type": "string"
+        },
+        "region": {
+          "description": "Region, state, or province",
+          "minLength": 2,
+          "type": "string"
+        },
+        "timezone": {
+          "description": "IANA timezone identifier",
+          "minLength": 3,
+          "type": "string"
+        }
+      },
+      "required": [
+        "country",
+        "country_code"
+      ],
+      "title": "Location",
+      "type": "object"
+    },
     "logo": {
       "additionalProperties": false,
       "description": "A logo",

@@ -1,5 +1,7 @@
-country: India
 leaders:
+location:
+  country: India
+  country_code: IN
 name: OWASP Chapter
 tags:
   - example-tag-1
