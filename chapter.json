@@ -18,6 +18,11 @@
       "type": "array",
       "uniqueItems": true
     },
+    "currency": {
+      "description": "ISO 4217 currency code",
+      "pattern": "^[A-Z]{3}$",
+      "type": "string"
+    },
     "events": {
       "description": "Events related to the project.",
       "items": {

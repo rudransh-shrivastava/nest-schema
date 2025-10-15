@@ -1,0 +1,12 @@
+currency: US
+leaders:
+  - name: Leader 1
+  - name: Leader 2
+location:
+  country: United States
+  country_code: US
+name: OWASP Chapter
+tags:
+  - tag1
+  - tag2
+  - tag3

@@ -23,6 +23,9 @@ from tests.conftest import tests_data_dir
             "has non-unique elements",
         ),
         ("community_null.yaml", "$.community: None is not of type 'array'"),
+        ("currency_empty.yaml", "$.currency: '' does not match '^[A-Z]{3}$'"),
+        ("currency_invalid_length.yaml", "$.currency: 'US' does not match '^[A-Z]{3}$'"),
+        ("currency_invalid_lowercase.yaml", "$.currency: 'usd' does not match '^[A-Z]{3}$'"),
         ("events_empty.yaml", "$.events: [] should be non-empty"),
         (
             "events_non_unique.yaml",

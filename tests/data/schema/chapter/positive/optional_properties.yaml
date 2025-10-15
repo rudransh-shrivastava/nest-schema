@@ -8,6 +8,7 @@ community:
     name: Discord Community
     platform: discord
     url: https://discord.com/example
+currency: INR
 events:
   - description: OWASP event description
     title: OWASP Event
@@ -42,6 +43,10 @@ mailing_list:
     url: https://testmailinglist.com
 meetup_group: OWASP Meetup
 name: OWASP Chapter
+repositories:
+  - description: Chapter repository for resources and materials
+    name: www-chapter-example
+    url: https://github.com/OWASP/www-chapter-example
 social_media:
   - description: A brief description of the social media platform
     platform: youtube
