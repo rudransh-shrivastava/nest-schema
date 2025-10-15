@@ -33,7 +33,7 @@ from tests.conftest import tests_data_dir
             "{'url': 'https://example.com/event1'}] has non-unique elements",
         ),
         ("events_null.yaml", "$.events: None is not of type 'array'"),
-        ("leaders_empty.yaml", "$.leaders: [] is too short"),
+        ("leaders_empty.yaml", "$.leaders: [] should be non-empty"),
         (
             "leaders_non_unique.yaml",
             "$.leaders: [{'github': 'leader1'}, {'github': 'leader1'}] has non-unique elements",
